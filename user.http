@@ -1,0 +1,28 @@
+@jwt = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGYwZTBkNDE0YjdjNTYxMjc1YjY3YmQiLCJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE3NjA2MTY5NzIsImV4cCI6MTc2MDYyMDU3Mn0.5jhSU-fopJUrNp1Mtgef6Q_mkPiS58cq2ArU84ezVNU
+
+### List all users
+GET http://localhost:5000/api/users
+Accept: application/json
+Authorization: Bearer {{jwt}}
+
+###
+
+### Get a single user by id
+@user_id = 68f0e0d414b7c561275b67bd
+GET http://localhost:5000/api/users/{{user_id}}
+Accept: application/json
+Authorization: Bearer {{jwt}}
+
+###
+
+### Create a user
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+  "fullname": "Jane Doe",
+  "email": "janedoe@example.com",
+  "password": "secret123"
+}
+
+
