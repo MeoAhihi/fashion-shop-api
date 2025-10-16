@@ -29,15 +29,24 @@ pip install -r requirements.txt
 ```bash
 cp .env.example .env
 ```
+
 - Edit the `.env` file to include your MongoDB connection string and other settings as needed.
 
 Example variables:
+
 ```
 MONGO_URI=<your-mongodb-uri>
 MONGO_DB=fashion_shop
 JWT_SECRET=your_secret_key
 JWT_TTL_MINUTES=60
 ```
+
+#### Environment Variable Explanations
+
+- `MONGO_URI`: The connection string for your MongoDB (Atlas) database. This is required for the app to connect to your data store.
+- `MONGO_DB`: The name of the MongoDB database the app will use (default is `fashion_shop`).
+- `JWT_SECRET`: A secret key used to sign and verify JSON Web Tokens (JWT) for authentication. Set this to a strong, random value.
+- `JWT_TTL_MINUTES`: The time-to-live (TTL) for JWTs in minutes. Determines how long a token remains valid after being issued.
 
 ### 5. Start the server
 
